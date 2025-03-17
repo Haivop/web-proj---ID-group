@@ -4,23 +4,27 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="author" content="Artem Svystun">
+    <link rel="stylesheet" type="text/css" href="style.css">
     <title>Imagine Dragons - Songs</title>
+    <style>
+        a:active{
+            color: silver;
+        }
+    </style>
 </head>
-<body bgcolor="#eafaf6" link="black" vlink="gray" alink="silver">
-    <font face="impact">
-        <center>
-            <a href="index.html" style="padding: 10px;">Про гурт</a>
-            <a href="frontman.html" style="padding: 10px;">Фронтмен</a>
-            <a href="line-up.html" style="padding: 10px;">Інші учасники</a>
-            <a href="songs&albums.html" style="padding: 10px;">Пісні та альбоми</a>
-        </center>
-    </font>
+<body>
+    <div class="nav">
+        <a href="index.html">Про гурт</a>
+        <a href="frontman.html">Фронтмен</a>
+        <a href="line-up.html">Інші учасники</a>
+        <a href="songs&albums.html">Пісні та альбоми</a>
+    </div>
 
-    <H1>Songs & Albums</H1>
+    <H1>Пісні та альбоми<hr></H1>
 
-    <table width="300px" border="1" cellpadding="3px" align="center">
-        <caption><h3>Albums</h3></caption>
-        <thead bgcolor="#a0e8bf"><tr><td><b>Night Visions</b></td><td><b>Smoke+Mirrors</b></td><td><b>Origins</b></td><td><b>Loom</b></td></tr></thead>
+    <table class="albums-table">
+        <caption><h2 class="headers">Albums</h2></caption>
+        <thead><tr><td><b>Night Visions</b></td><td><b>Smoke+Mirrors</b></td><td><b>Origins</b></td><td><b>Loom</b></td></tr></thead>
         <tbody>
             <tr>
                 <td><img src="Images/Night_Visions_Album_Cover.jpeg" alt="Night Visions Album Cover"></td>
@@ -28,7 +32,7 @@
                 <td><img src="Images/Origins_cover.png" alt="Origins Album Cover"></td>
                 <td><img src="Images/Imagine_Dragons_-_Loom.png" alt="Loom Album Cover"></td>
             </tr>
-            <tr>
+            <tr class="album-copyright">
                 <td>
                     By Imagine Dragons - <a rel="nofollow" class="external free" href="http://imaginedragonsfans.com">http://imaginedragonsfans.com</a>, 
                     <a href="//en.wikipedia.org/wiki/File:Night_Visions_Album_Cover.jpeg" title="Fair use of copyrighted material in the context of Night Visions (album)">Fair use</a>, 
@@ -50,7 +54,7 @@
                     <a href="https://en.wikipedia.org/w/index.php?curid=76710590">Link</a>
                 </td>
             </tr>
-            <tr style="vertical-align: top;" align="justify">
+            <tr class="album-text">
                 <td>
                     <p>
                         Дебютний студійний альбом американського поп-рок-гурту Imagine Dragons, представлений 4 вересня 2012 року. 
@@ -85,21 +89,16 @@
                 </td>
             </tr>
         </tbody>
-    </table> <hr>
+    </table>
 
-    <table border="1" align="center" cellpadding="10px" cellspacing="1px">
-        <caption><h3>Songs</h3></caption>
-
-        <colgroup>
-            <col bgcolor="91ffc0">
-            <col span="4" bgcolor="bbfcd7">
-        </colgroup>
+    <table class="songs-table">
+        <caption><h2 class="headers">Songs</h2></caption>
 
         <thead>
-            <tr bgcolor="a0e8bf"><td>Альбом</td><td>#</td><td>Пісня</td><td>Тривалість</td><td>Кількість прослуховувань на Spotify</td></tr>
+            <tr><td>Альбом</td><td>#</td><td>Пісня</td><td>Тривалість</td><td>Кількість прослуховувань на Spotify</td></tr>
         </thead>
         <tbody>
-            <tr><td rowspan="10" align="center">Loom</td><td colspan="4" align="center">2024, 9 пісень, 28:11 хв</td></tr>
+            <tr><td class="album" rowspan="10">Loom</td><td class="album-summary" colspan="4">2024, 9 пісень, 28:11 хв</td></tr>
             <tr><td>1.</td><td>Wake Up</td>            <td>2:46</td>    <td align="right">57 468 120</td></tr>
             <tr><td>2.</td><td>Nice To Meet You</td>   <td>3:10</td>    <td align="right">65 791 096</td></tr>
             <tr><td>3.</td><td>Eyes Closed</td>        <td>3:20</td>    <td align="right">130 664 938</td></tr>

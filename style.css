@@ -1,0 +1,186 @@
+/**/
+/*Init variables*/
+:root{
+    --onyx : #32373B;
+    --rozequartz : #C1AEB8;
+}
+
+/*body*/
+body, html{
+    font-family: 'Times New Roman', Times;
+    font-size: large;
+    line-height: 1.5;
+    
+    box-sizing: border-box;
+    overflow-wrap: break-word;
+
+    display: flex;
+    flex-direction: column;
+
+    height: 100%;
+    margin: 0;
+    padding: 0;
+}
+
+/*Links*/
+a:link {
+    color: black;
+}
+
+a:visited {
+    color: gray;
+}
+
+a:active {
+    color: orangered;
+}
+
+/*Navigation*/
+.nav {
+    display: flex;
+    justify-content: space-around;
+
+    background-color: var(--onyx);
+}
+
+.nav a{
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+
+    text-align: center;
+    text-decoration: none;
+    word-wrap: break-word;
+    padding: 18.4px;
+    width: 100%;
+}
+
+.nav a:visited{
+    color : lightgray;
+}
+
+.nav a:hover {
+    background-color: lightgray;
+    color : var(--onyx);
+}
+
+/*Headers*/
+.headers {
+    margin-left: 10px;
+    font-variant: small-caps;
+}
+
+/*Text*/
+p {
+    margin-left: 20px;
+    text-align: justify;
+    text-indent: 40px;
+}
+
+.emphesise {
+    font-style: oblique;
+    color: var(--onyx);
+}
+
+/*Lists*/
+
+    /*Dictionary*/
+dl  {
+    margin-left: 30px;
+}
+
+dt {
+    font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;
+}
+
+dd {
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif !important;
+}
+
+    /*Num*/
+ol {
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    background-color: var(--onyx);
+    color : var(--rozequartz);
+
+    margin: 10px;
+}
+
+ol li{
+    font-weight: bold;
+}
+
+    /*Marked*/
+ul {
+    width: max-content;
+    background-color: var(--onyx);
+    color : white;
+}
+
+ul a:link {
+    color: white;
+}
+
+ul a:visited {
+    color: var(--rozequartz);
+}
+
+ul a:active {
+    color: aquamarine;
+}
+
+/*Tables*/
+    /*All Tables*/
+table{
+    border: 2px solid black;
+}
+
+table p{
+    margin: 0px;
+}
+
+table tr {
+    vertical-align: top;
+}
+
+table td {
+    padding: 5px;
+}
+
+table thead {
+    background-color: var(--onyx);
+    color: white;
+    text-align: center;
+}
+
+    /*Albums Table*/
+.albums-table {
+    width: 300px;
+    align-self: center;
+}
+
+    /*Songs Table*/
+.songs-table {
+    width: 50%;
+    align-self: center;
+}
+
+.album {
+    background-color: var(--rozequartz);
+    text-align: center;
+    align-content: center;
+}
+
+.album-summary {
+    text-align: center;
+    background-color: var(--rozequartz);
+}
+
+/*Containers*/
+.main-container {
+    display: grid;
+    grid-template-columns: max-content auto;
+}
+
+.main-container p{
+    margin: 0px;
+    margin-left: 10px;
+}

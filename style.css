@@ -133,16 +133,16 @@ table{
     border: 2px solid black;
 }
 
-table p{
-    margin: 0px;
-}
-
-table tr {
+tr {
     vertical-align: top;
 }
 
-table td {
+td {
     padding: 5px;
+}
+
+table p{
+    margin: 0px;
 }
 
 table thead {

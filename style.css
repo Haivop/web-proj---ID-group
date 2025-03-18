@@ -6,21 +6,19 @@
 }
 
 /*body*/
-html, body{
+body{
     background-color: aliceblue;
     font-family: 'Times New Roman', Times;
     font-size: large;
     line-height: 1.5;
+    overflow-wrap: break-word;
+
+    display: flex;
+    flex-direction: column;
 
     height: 100%;
     margin: 0;
     padding: 0;
-}
-
-body{
-    overflow-wrap: break-word;
-    display: flex;
-    flex-direction: column;
 }
 
 /*Links*/

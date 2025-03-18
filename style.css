@@ -152,13 +152,13 @@ table thead {
 }
 
     /*Albums Table*/
-.albums-table {
+#albums-table {
     width: 300px;
     align-self: center;
 }
 
     /*Songs Table*/
-.songs-table {
+#songs-table {
     width: 50%;
     align-self: center;
 }

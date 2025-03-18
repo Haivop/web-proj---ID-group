@@ -6,21 +6,21 @@
 }
 
 /*body*/
-body, html{
+html, body{
     background-color: aliceblue;
     font-family: 'Times New Roman', Times;
     font-size: large;
     line-height: 1.5;
-    
-    box-sizing: border-box;
-    overflow-wrap: break-word;
-
-    display: flex;
-    flex-direction: column;
 
     height: 100%;
     margin: 0;
     padding: 0;
+}
+
+body{
+    overflow-wrap: break-word;
+    display: flex;
+    flex-direction: column;
 }
 
 /*Links*/
@@ -146,7 +146,7 @@ table p{
     margin: 0px;
 }
 
-table thead {
+thead {
     background-color: var(--onyx);
     color: white;
     text-align: center;
@@ -156,6 +156,10 @@ table thead {
 #albums-table {
     width: 300px;
     align-self: center;
+}
+
+#albums-table td {
+    border: 2px solid black;
 }
 
     /*Songs Table*/

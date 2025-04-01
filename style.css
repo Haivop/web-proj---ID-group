@@ -42,7 +42,7 @@ a:active {
     background-color: var(--onyx);
 }
 
-.nav a{
+.nav > a{
     font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
 
     text-align: center;
@@ -52,11 +52,11 @@ a:active {
     width: 100%;
 }
 
-.nav a:visited{
+.nav >  a:visited{
     color : lightgray;
 }
 
-.nav a:hover {
+.nav > a:hover {
     background-color: lightgray;
     color : var(--onyx);
 }
@@ -72,6 +72,11 @@ p {
     margin-left: 20px;
     text-align: justify;
     text-indent: 40px;
+}
+
+p + p {
+    margin-top: 0;
+    text-indent: 0px;
 }
 
 .emphesise {
@@ -181,6 +186,7 @@ thead {
 .main-container {
     display: grid;
     grid-template-columns: max-content auto;
+    margin: 10px;
 }
 
 .main-container p{

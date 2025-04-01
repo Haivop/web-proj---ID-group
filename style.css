@@ -42,7 +42,7 @@ a:active {
     background-color: var(--onyx);
 }
 
-.nav > a{
+.nav a{
     font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
 
     text-align: center;
@@ -52,11 +52,11 @@ a:active {
     width: 100%;
 }
 
-.nav >  a:visited{
+.nav a:visited{
     color : lightgray;
 }
 
-.nav > a:hover {
+.nav a:hover {
     background-color: lightgray;
     color : var(--onyx);
 }
@@ -143,6 +143,10 @@ tr {
 
 td {
     padding: 5px;
+}
+
+td > p {
+    font-size: small;
 }
 
 table p{

@@ -52,6 +52,10 @@ a:active {
     width: 100%;
 }
 
+.nav a:link{
+    color : lightgray;
+}
+
 .nav a:visited{
     color : lightgray;
 }
@@ -68,14 +72,16 @@ a:active {
 }
 
 /*Text*/
-p {
+div p:first-child {
     margin-left: 20px;
     text-align: justify;
     text-indent: 40px;
 }
 
-p + p {
+div p {
     margin-top: 0;
+    margin-left: 20px;
+    text-align: justify;
     text-indent: 0px;
 }
 
@@ -83,6 +89,20 @@ p + p {
     font-style: oblique;
     color: var(--onyx);
 }
+
+.info-i{
+    font-style: italic;
+    font-size: medium;
+}
+
+.info-i::before{
+    content: '(';
+}
+
+.info-i::after{
+    content: ')';
+}
+
 
 /*Lists*/
 
@@ -102,14 +122,16 @@ dd {
     /*Num*/
 ol {
     font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
-    background-color: var(--onyx);
-    color : var(--rozequartz);
+    color : #5ab092;
 
     margin: 10px;
+    width: max-content;
 }
 
 ol li{
     font-weight: bold;
+    position: relative;
+    left: 12%;
 }
 
     /*Marked*/
@@ -117,6 +139,18 @@ ul {
     width: max-content;
     background-color: var(--onyx);
     color : white;
+    list-style-type: none;
+    float: left;
+}
+
+ul li::before{
+    content: "\20aa ";
+    padding-right: 5px;
+}
+
+ul li::after{
+    content: "\20aa ";
+    padding-left: 5px;
 }
 
 ul a:link {
@@ -150,7 +184,7 @@ td > p {
 }
 
 table p{
-    margin: 0px;
+    margin: 0px !important;
 }
 
 thead {
@@ -193,7 +227,27 @@ thead {
     margin: 10px;
 }
 
-.main-container p{
-    margin: 0px;
+.main-container p:first-child{
     margin-left: 10px;
+    margin-top: 0px;
+}
+
+.main-container p{
+    margin-left: 10px;
+    margin-top: 10px;
+}
+
+.content-conteiner{
+    width: 95%;
+}
+
+.content-conteiner ol{
+    position: relative;
+    left: 40%;
+}
+
+iframe {
+    float: right;
+    width: 900px; height: 570px;
+    margin-top: 18px;
 }

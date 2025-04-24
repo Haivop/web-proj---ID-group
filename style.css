@@ -52,11 +52,7 @@ a:active {
     width: 100%;
 }
 
-.nav a:link{
-    color : lightgray;
-}
-
-.nav a:visited{
+.nav a:link, .nav a:visited{
     color : lightgray;
 }
 
@@ -250,4 +246,14 @@ iframe {
     float: right;
     width: 900px; height: 570px;
     margin-top: 18px;
+}
+
+/*Buttons*/
+button {
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    width: 100%;
+    font-size: large;
+    padding: 5px;
+    background-color: var(--onyx);
+    color: white;
 }

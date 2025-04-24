@@ -15,6 +15,16 @@
         <a href="songs&albums.html">Пісні та альбоми</a>
     </div>
 
+    <button onclick="dialog()">Інформація про розробника</button>
+    <button onclick="handleQuizClick()">Опитування</button>
+    <script >
+        function handleQuizClick() {
+            if(confirm("Любите Imagine Dragons?")){
+                prompt("Скільки приблизно їх пісень на тиждень ви прослуховуєте?", "")
+            }
+        }
+    </script>
+
     <H1 class="headers">Пісні та альбоми<hr></H1>
 
     <table id="albums-table">
@@ -109,19 +119,26 @@
         <thead>
             <tr><td>Альбом</td><td>#</td><td>Пісня</td><td>Тривалість</td><td>Кількість прослуховувань на Spotify</td></tr>
         </thead>
-        <tbody>
+        <tbody id="songs-table-body">
             <tr><td class="album" rowspan="10">Loom</td><td class="album-summary" colspan="4">2024, 9 пісень, 28:11 хв</td></tr>
-            <tr><td>1.</td><td>Wake Up</td>            <td>2:46</td>    <td align="right">57 468 120</td></tr>
-            <tr><td>2.</td><td>Nice To Meet You</td>   <td>3:10</td>    <td align="right">65 791 096</td></tr>
-            <tr><td>3.</td><td>Eyes Closed</td>        <td>3:20</td>    <td align="right">130 664 938</td></tr>
-            <tr><td>4.</td><td>Take Me To Beach</td>   <td>2:47</td>    <td align="right">26 801 278</td></tr>
-            <tr><td>5.</td><td>In Your Corner</td>     <td>3:59</td>    <td align="right">21 110 105</td></tr>
-            <tr><td>6.</td><td>Gods Don't Pray</td>    <td>2:49</td>    <td align="right">18 535 609</td></tr>
-            <tr><td>7.</td><td>Don't Forget Me</td>    <td>2:58</td>    <td align="right">17 913 834</td></tr>
-            <tr><td>8.</td><td>Kid</td>                <td>2:39</td>    <td align="right">10 693 748</td></tr>
-            <tr><td>9.</td><td>Fire In These Hills</td><td>3:39</td>    <td align="right">13 119 017</td></tr>
+            <tr><td>1.</td><td class="name">Wake Up</td>            <td>2:46</td>    <td align="right">57 468 120</td></tr>
+            <tr><td>2.</td><td class="name">Nice To Meet You</td>   <td>3:10</td>    <td align="right">65 791 096</td></tr>
+            <tr><td>3.</td><td class="name">Eyes Closed</td>        <td>3:20</td>    <td align="right">130 664 938</td></tr>
+            <tr><td>4.</td><td class="name">Take Me To Beach</td>   <td>2:47</td>    <td align="right">26 801 278</td></tr>
+            <tr><td>5.</td><td class="name">In Your Corner</td>     <td>3:59</td>    <td align="right">21 110 105</td></tr>
+            <tr><td>6.</td><td class="name">Gods Don't Pray</td>    <td>2:49</td>    <td align="right">18 535 609</td></tr>
+            <tr><td>7.</td><td class="name">Don't Forget Me</td>    <td>2:58</td>    <td align="right">17 913 834</td></tr>
+            <tr><td>8.</td><td class="name">Kid</td>                <td>2:39</td>    <td align="right">10 693 748</td></tr>
+            <tr><td>9.</td><td class="name">Fire In These Hills</td><td>3:39</td>    <td align="right">13 119 017</td></tr>
         </tbody>
     </table>
+    
+    <button onclick="CompareNameLengths()" style="margin-top: 10px;">Порівняти</button>
+    <div class="nav">
+        <button onclick="AppendAlbum()">Додати альбом</button>
+        <button onclick="AppendSong()">Додати пісню</button>
+    </div>
 
+    <script src="index.js"></script>
 </body>
 </html>

@@ -2,6 +2,40 @@
 
 const songTable = document.getElementById("songs-table");
 const songs = songTable.querySelectorAll(".name");
+var tableBody = document.getElementById('songs-table-body');
+var save = undefined;
+
+function getSlogan(){
+    alert(document.getElementById("slogan").nodeValue);
+}
+
+function tableRowRemove(){
+    if (tableBody.lastElementChild) {
+        save = tableBody.lastElementChild
+        tableBody.lastElementChild.remove();
+    }
+}
+
+function prependSavedRow(){
+    let save_temp = tableBody.firstElementChild;
+    if(save){
+        tableBody.firstElementChild.remove();
+        tableBody.prepend(save);
+        tableBody.prepend(save_temp);
+    }
+}
+
+function replaceInconsistancy(){
+    const rows = Array.from(tableBody.querySelectorAll('tr'));
+    const targetRow = rows.find(row => row.children[0].textContent.trim() === '9.');
+    tableBody.lastElementChild.after(targetRow);
+}
+
+function replaceFirstANDLast() {
+    let save = tableBody.children[1];
+    tableBody.children[1].replaceWith(tableBody.lastElementChild);
+    tableBody.lastElementChild.after(save)
+}
 
 function devInfo(devLastname, devName, position="Студент НТУУ КПІ ім. Ігоря Сікорскього факултета ФІОТ"){
     alert("Розробник цього сайта\n" + devLastname + " " + devName + "\n" + position)
@@ -42,17 +76,20 @@ function CompareNameLengths(){
 
     if((name1 >= '1') && (name2 >= '1') && (name1 <= '9') && (name2 <= '9') && (name1 != name2))
     {
-        name1 = songs[Number(name1)-1].innerHTML;
-        name2 = songs[Number(name2)-1].innerHTML;
-    
-        if(name1 > name2){
-            alert(name1);
-        }
-        else if(name2 > name1){
-            alert(name2);
-        }
-        else{
-            alert("Рядки рівні");
+        if(songs[Number(name1)-1].firstChild.nodeValue != 'Wake Up' && songs[Number(name2)-1].firstChild.nodeValue != 'Wake Up'){
+            alert(songs[Number(name1)-1].firstChild.nodeValue)
+            name1 = songs[Number(name1)-1].innerHTML;
+            name2 = songs[Number(name2)-1].innerHTML;
+        
+            if(name1 > name2){
+                alert(name1);
+            }
+            else if(name2 > name1){
+                alert(name2);
+            }
+            else{
+                alert("Рядки рівні");
+            }
         }
     }
 }
@@ -83,4 +120,3 @@ function AppendAlbum(){
     }
     document.getElementById("songs-table-body").appendChild(row)
 }
-

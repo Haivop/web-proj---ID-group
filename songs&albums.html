@@ -131,6 +131,13 @@
             <tr><td>8.</td><td class="name">Kid</td>                <td>2:39</td>    <td align="right">10 693 748</td></tr>
             <tr><td>9.</td><td class="name">Fire In These Hills</td><td>3:39</td>    <td align="right">13 119 017</td></tr>
         </tbody>
+        
+        <div class="nav" style="margin-top: 10px;">
+            <button onclick="tableRowRemove()">Видалити останню пісню</button>
+            <button onclick="prependSavedRow()">На перше місце</button>
+            <button onclick="replaceInconsistancy()">Повернути</button>
+            <button onclick="replaceFirstANDLast()">Перемістити Перший і останній</button>
+        </div>
     </table>
     
     <button onclick="CompareNameLengths()" style="margin-top: 10px;">Порівняти</button>

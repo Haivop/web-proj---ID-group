@@ -48,7 +48,7 @@
     </section>
     
     <div>
-        <ul type="circle">
+        <ul type="circle" id="song-list">
             <label><H3 class="headers">Його співпраці</H3><hr></label>
             <li>All tracks - Egyptian</li>
             <li>"Stranger" - <a href="Images/X-Ambassadors_680x440.jpg" target="Playout">X Ambassadors</a></li>
@@ -66,9 +66,16 @@
             <li>"Original Me" - Yungblud</li>
             <li>"My Own Dance" - Kesha</li>
             <li>"Stand Up" - Tom Morello</li>
-            <li>"Life is Beautiful"	Thirty Seconds to Mars</li>
-            <li>"Abyss"	Yungblud</li>
+            <li>"Life is Beautiful" - Thirty Seconds to Mars</li>
         </ul>
+        
+        <script>
+            const songList = document.getElementById('song-list');
+
+            const newSong = document.createElement('li');
+            secondNewSong.textContent = '"Abyss" - Yungblud';
+            songList.lastChild.after(newSong);
+        </script>
 
         <iframe name="Playout" scrolling="auto" frameborder="0"></iframe> 
     </div>

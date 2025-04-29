@@ -1,15 +1,9 @@
 "USE STRICT";
 
-const songTable = document.getElementById("songs-table");
-const songs = songTable.querySelectorAll(".name");
-var tableBody = document.getElementById('songs-table-body');
 var save = undefined;
 
-function getSlogan(){
-    alert(document.getElementById("slogan").nodeValue);
-}
-
 function tableRowRemove(){
+    const tableBody = document.getElementById('songs-table-body');
     if (tableBody.lastElementChild) {
         save = tableBody.lastElementChild
         tableBody.lastElementChild.remove();
@@ -17,6 +11,7 @@ function tableRowRemove(){
 }
 
 function prependSavedRow(){
+    const tableBody = document.getElementById('songs-table-body');
     let save_temp = tableBody.firstElementChild;
     if(save){
         tableBody.firstElementChild.remove();
@@ -26,12 +21,14 @@ function prependSavedRow(){
 }
 
 function replaceInconsistancy(){
+    const tableBody = document.getElementById('songs-table-body');
     const rows = Array.from(tableBody.querySelectorAll('tr'));
     const targetRow = rows.find(row => row.children[0].textContent.trim() === '9.');
     tableBody.lastElementChild.after(targetRow);
 }
 
 function replaceFirstANDLast() {
+    const tableBody = document.getElementById('songs-table-body');
     let save = tableBody.children[1];
     tableBody.children[1].replaceWith(tableBody.lastElementChild);
     tableBody.lastElementChild.after(save)
@@ -68,16 +65,15 @@ function dialog(){
 }
 
 function CompareNameLengths(){
-    var name1;
-    var name2;
+    const songTable = document.getElementById("songs-table");
+    const songs = songTable.querySelectorAll(".name");
 
-    name1 = prompt("Оберіть першу назву пісні за номером в таблиці");
-    name2 = prompt("Оберіть другу назву пісні за номером в таблиці");
+    let name1 = prompt("Оберіть першу назву пісні за номером в таблиці");
+    let name2 = prompt("Оберіть другу назву пісні за номером в таблиці");
 
     if((name1 >= '1') && (name2 >= '1') && (name1 <= '9') && (name2 <= '9') && (name1 != name2))
     {
         if(songs[Number(name1)-1].firstChild.nodeValue != 'Wake Up' && songs[Number(name2)-1].firstChild.nodeValue != 'Wake Up'){
-            alert(songs[Number(name1)-1].firstChild.nodeValue)
             name1 = songs[Number(name1)-1].innerHTML;
             name2 = songs[Number(name2)-1].innerHTML;
         
@@ -115,8 +111,13 @@ function AppendAlbum(){
             albumPretext.className = "album-summary";
             albumPretext.colSpan = 4;
         }
-        albumPretext.appendChild(textnode)
-        row.appendChild(albumPretext)
+        albumPretext.append(textnode)
+        row.append(albumPretext)
     }
-    document.getElementById("songs-table-body").appendChild(row)
+    document.getElementById("songs-table-body").append(row)
+}
+
+function changeListType(){
+    let list = document.getElementsByTagName("ol")[0];
+    list.outerHTML = "<ul><label><H3 class=\"headers\">Жанри, в яких виконує</H3><hr></label><li>Алтернативний рок</li><li>Інді-рок</li><li>Поп-рок</li><li>Інді-поп</li><li>Електропоп</li></ul>"
 }

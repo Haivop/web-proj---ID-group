@@ -39,12 +39,6 @@
             </ol>
         </div>
         <button onclick="changeListType()">Змінити відображення списка</button>
-        <script>
-            function changeListType(){
-                let list = document.getElementsByTagName("ol")[0];
-                list.outerHTML = "<ul><label><H3 class=\"headers\">Жанри, в яких виконує</H3><hr></label><li>Алтернативний рок</li><li>Інді-рок</li><li>Поп-рок</li><li>Інді-поп</li><li>Електропоп</li></ul>"
-            }
-        </script>
     </section>
     
     <div>
@@ -71,8 +65,8 @@
         
         <script>
             const songList = document.getElementById('song-list');
-
             const newSong = document.createElement('li');
+            
             secondNewSong.textContent = '"Abyss" - Yungblud';
             songList.lastChild.after(newSong);
         </script>

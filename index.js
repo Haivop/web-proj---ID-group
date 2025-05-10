@@ -1,5 +1,4 @@
 "USE STRICT";
-
 var save = undefined;
 
 function tableRowRemove(){
@@ -90,7 +89,8 @@ function CompareNameLengths(){
     }
 }
 
-function changeBackColor(color='#C1AEB8'){
+function changeBackColor(){
+    color='#C1AEB8'
     document.body.style.background = color; 
     setTimeout(() => document.body.style.background = '', 30000);
 }
@@ -121,3 +121,19 @@ function changeListType(){
     let list = document.getElementsByTagName("ol")[0];
     list.outerHTML = "<ul><label><H3 class=\"headers\">Жанри, в яких виконує</H3><hr></label><li>Алтернативний рок</li><li>Інді-рок</li><li>Поп-рок</li><li>Інді-поп</li><li>Електропоп</li></ul>"
 }
+
+document.getElementById("dialogButton").addEventListener('click', dialog);
+
+document.addEventListener('click', function(event) {
+    const toggleSource = event.target.closest('[data-toggle-id]');
+    if (!toggleSource) return;
+
+    const toggledElemId = toggleSource.dataset.toggleId;
+    const toggledElement = document.getElementById(toggledElemId);
+    if (!toggledElement) return;
+
+    const isHidden = toggledElement.dataset.hidden === 'true';
+
+    toggledElement.style.visibility = isHidden ? 'visible' : 'collapse';
+    toggledElement.dataset.hidden = (!isHidden).toString();
+});

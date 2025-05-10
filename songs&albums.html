@@ -5,7 +5,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="author" content="Artem Svystun">
     <link rel="stylesheet" type="text/css" href="style.css">
-    <script src="index.js"></script>
     <title>Imagine Dragons - Songs</title>
 </head>
 <body>
@@ -16,10 +15,10 @@
         <a href="songs&albums.html">Пісні та альбоми</a>
     </div>
 
-    <button onclick="dialog()">Інформація про розробника</button>
-    <button onclick="handleQuizClick()">Опитування</button>
-    <script >
-        function handleQuizClick() {
+    <button id="dialogButton">Інформація про розробника</button>
+    <button id="quiz">Опитування</button>
+    <script>
+        document.getElementById("quiz").onclick = function (){
             if(confirm("Любите Imagine Dragons?")){
                 prompt("Скільки приблизно їх пісень на тиждень ви прослуховуєте?", "")
             }
@@ -30,8 +29,8 @@
 
     <table id="albums-table">
         <caption><h2 class="headers">Albums</h2></caption>
-        <thead><tr><td><b>Night Visions</b></td><td><b>Smoke+Mirrors</b></td><td><b>Origins</b></td><td><b>Loom</b></td></tr></thead>
-        <tbody>
+        <thead data-toggle-id="albums-metadata"><tr><td><b>Night Visions</b></td><td><b>Smoke+Mirrors</b></td><td><b>Origins</b></td><td><b>Loom</b></td></tr></thead>
+        <tbody id="albums-metadata">
             <tr>
                 <td><img src="Images/Night_Visions_Album_Cover.jpeg" alt="Night Visions Album Cover"></td>
                 <td><img src="Images/Imagine_Dragons_-_Smoke_+_Mirrors.png" alt="Smoke+Mirrors Album Cover"></td>
@@ -114,6 +113,7 @@
         </tbody>
     </table>
 
+
     <table id="songs-table">
         <caption><h2 class="headers">Songs</h2></caption>
 
@@ -134,13 +134,16 @@
         </tbody>
     </table>
     
-    <div class="nav" style="margin-top: 10px;">
-        <button onclick="tableRowRemove()">Видалити останню пісню</button>
-        <button onclick="prependSavedRow()">На перше місце</button>
-        <button onclick="replaceInconsistancy()">Повернути</button>
-        <button onclick="replaceFirstANDLast()">Перемістити перший і останній</button>
+    <div id="tableOperationsMenu" style="margin-top: 10px;">
+        <button data-action="remove">Видалити останню пісню</button>
+        <button data-action="prepend">На перше місце</button>
+        <button data-action="returnToStart">Повернути</button>
+        <button data-action="replace">Перемістити перший і останній</button>
     </div>
+    <script src="menu.js"></script>
+
     <button onclick="CompareNameLengths()" style="margin-top: 10px;">Порівняти</button>
     <button onclick="AppendAlbum()">Додати альбом</button>
+    <script src="index.js"></script>
 </body>
 </html>

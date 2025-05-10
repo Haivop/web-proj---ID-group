@@ -15,8 +15,17 @@
         <a href="songs&albums.html">Пісні та альбоми</a>
     </div>
 
-    <button onclick="dialog()">Інформація про розробника</button>
-    <button onclick="changeBackColor()">Змінити фон</button>
+    <button id="dialogButton">Інформація про розробника</button>
+    <button id="changeBackButton">Змінити фон</button>
+    <script>
+        document.getElementById("changeBackButton").addEventListener('click', {
+            handleEvent(event){
+                changeBackColor();
+                alert("Current target is : " + event.currentTarget.tagName);
+                event.currentTarget.removeEventListener("click", this);
+            }
+        });
+    </script>
     <script src="index.js"></script>
 
     <H1 class="headers">Інші учасники гурту</H1>

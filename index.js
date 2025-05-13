@@ -137,3 +137,13 @@ document.addEventListener('click', function(event) {
     toggledElement.style.visibility = isHidden ? 'visible' : 'collapse';
     toggledElement.dataset.hidden = (!isHidden).toString();
 });
+
+document.addEventListener('click', function(event) {
+    const toggleSource = event.target.closest('[data-toggle-id]');
+    if (!toggleSource) return;
+
+    let isColored = toggleSource.style.color === 'rgb(90, 176, 146)';
+    toggleSource.style.color = isColored ? 'white' : '#5ab092';
+    isColored = !isColored;
+});
+

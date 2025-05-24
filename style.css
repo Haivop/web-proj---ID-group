@@ -259,3 +259,48 @@ button {
     background-color: var(--onyx);
     color: white;
 }
+
+/*Drag'n'Drop*/
+.drag-over-top td {
+    border-top: 3px solid var(--rozequartz) !important;
+}
+
+.drag-over-bottom td {
+    border-bottom: 3px solid var(--rozequartz) !important;
+}
+
+.hovered-row {
+    background-color: var(--onyx);
+    color: white;
+}
+
+#album-game {
+    height: max-content;
+    width: max-content;
+    justify-self: center;
+    border: 2px solid #32373B
+}
+
+#album-game > :first-child {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr); /* 4 колонки — по одній на кожен рік */
+    grid-template-rows: auto auto;         /* 2 рядки — роки + блоки під ними */
+}
+
+#album-game > :first-child .year {
+  background-color: #444;
+  padding: 20px;
+  text-align: center;
+  color: white;
+  font-weight: bold;
+}
+
+#album-game > :first-child .place {
+  padding: 20px;
+  border: 1px #32373B solid;
+  height: 50px;
+}
+
+#album-pool {
+    min-height: 50px;
+}

@@ -8,25 +8,12 @@
     <title>Imagine Dragons - Others in line-up</title>
 </head>
 <body>
-    <div class="nav">
+    <div class="nav" id="nav">
         <a href="index.html">Про гурт</a>
         <a href="frontman.html">Фронтмен</a>
         <a href="line-up.html">Інші учасники</a>
         <a href="songs&albums.html">Пісні та альбоми</a>
     </div>
-
-    <button id="dialogButton">Інформація про розробника</button>
-    <button id="changeBackButton">Змінити фон</button>
-    <script>
-        document.getElementById("changeBackButton").addEventListener('click', {
-            handleEvent(event){
-                changeBackColor();
-                alert("Current target is : " + event.currentTarget.tagName);
-                event.currentTarget.removeEventListener("click", this);
-            }
-        });
-    </script>
-    <script src="index.js"></script>
 
     <H1 class="headers">Інші учасники гурту</H1>
 

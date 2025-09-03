@@ -4,18 +4,6 @@ class Menu {
         elem.onclick = this.onClick.bind(this);
     } 
 
-    remove() {
-        tableRowRemove();
-    };
-    prepend() {
-        prependSavedRow();
-    }
-    returnToStart() {
-        replaceInconsistancy();
-    }
-    replace() {
-        replaceFirstANDLast()
-    }
 
     onClick(event) {
         let action = event.target.dataset.action; 

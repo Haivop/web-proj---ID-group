@@ -8,15 +8,12 @@
     <title>Imagine Dragons - Frontman</title>
 </head>
 <body>
-    <div class="nav">
+    <div class="nav" id="nav">
         <a href="index.html">Про гурт</a>
         <a href="frontman.html">Фронтмен</a>
         <a href="line-up.html">Інші учасники</a>
         <a href="songs&albums.html">Пісні та альбоми</a>
     </div>
-
-    <button id="dialogButton">Інформація про розробника</button>
-    <script src="index.js"></script>
 
     <H1 class="headers"><a name="Den R.">Фронтмен</a><hr></H1>
 
@@ -62,24 +59,6 @@
             <li>"Stand Up" - Tom Morello</li>
             <li>"Life is Beautiful" - Thirty Seconds to Mars</li>
         </ul>
-        
-        <script>
-            const songList = document.getElementById('song-list');
-            const newSong = document.createElement('li');
-
-            newSong.textContent = '"Abyss" - Yungblud';
-            songList.lastElementChild.after(newSong);
-
-            songList.onclick = function(){
-                const clicked = event.target.closest("li");
-                clicked.style.background = 'aquamarine';
-                clicked.style.color = 'black';
-                setTimeout(() => clicked.style.background = '', 200);
-                setTimeout(() => clicked.style.color = '', 200);
-            }
-        </script>
-
-        <iframe name="Playout" scrolling="auto" frameborder="0"></iframe> 
     </div>
     
     <section>

@@ -1,8 +1,10 @@
 /**/
 /*Init variables*/
 :root{
-    --onyx : #32373B;
-    --rozequartz : #C1AEB8;
+    --main-color: #32373B;
+    --accent-color: aquamarine;
+
+    --rozequartz: #C1AEB8;
 }
 
 /*body*/
@@ -11,63 +13,91 @@ body{
     font-family: 'Times New Roman', Times;
     font-size: large;
     line-height: 1.5;
-    overflow-wrap: break-word;
 
-    display: flex;
-    flex-direction: column;
+    display: grid;
+    grid-template-columns: auto 1fr;
 
     height: 100%;
     margin: 0;
     padding: 0;
 }
 
-/*Links*/
-a:link {
-    color: black;
-}
-
-a:visited {
-    color: gray;
-}
-
-a:active {
-    color: orangered;
-}
-
 /*Navigation*/
-.nav, #tableOperationsMenu{
-    justify-content: space-around;
-    background-color: var(--onyx);
-    display: none;
+
+#sidebar{
+    background-color: var(--main-color);
+    height: 100vh;
+    width: 0px;
+
+    overflow: hidden;
+    position: sticky;
+    top: 0;
+    align-self: self-start;
+
+    transition-property: width;
+    transition-duration: 1s;
 }
 
-.nav.active, #tableOperationsMenu.active{
-    display: flex;
+#sidebar > ul{
+    list-style: none;
+    padding-left: 0;
 }
 
-.nav a{
+#sidebar a{
     font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
 
+    color : lightgray;
     text-align: center;
     text-decoration: none;
-    word-wrap: break-word;
-    padding: 18.4px;
-    width: 100%;
+    white-space: nowrap;
+
+    display: flex;
+    padding: 1rem;
 }
 
-.nav a:link, .nav a:visited{
-    color : lightgray;
+#sidebar ul li.active a{
+    color: var(--accent-color);
 }
 
-.nav a:hover {
-    background-color: lightgray;
-    color : var(--onyx);
+#sidebar a:hover, #sidebar li:hover {
+    background-color: gray;
+}
+
+#sidebar.active{
+    width: 170px;
 }
 
 /*Headers*/
 .headers {
     margin-left: 10px;
     font-variant: small-caps;
+}
+
+.credentials{
+    background-color: var(--main-color);
+    display: flex;
+    justify-content: space-between;
+
+    position: sticky;
+    top: 0;
+    align-self: self-start;
+}
+
+.credentials p a{
+    color: lightgray;
+}
+
+.credentials a, .credentials p, .credentials i{
+    margin: 5px !important;
+    align-content: center;
+}
+
+#bars-icon, #github-icon{
+    color: white;
+}
+
+.credentials > div{
+    display: flex;
 }
 
 /*Text*/
@@ -86,7 +116,7 @@ div p {
 
 .emphesise {
     font-style: oblique;
-    color: var(--onyx);
+    color: var(--main-color);
 }
 
 .info-i{
@@ -116,64 +146,14 @@ dt {
     font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;
 }
 
-dt > h3 {
-    font-size: larger;
-}
-
 dd {
     font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif !important;
 }
-
-    /*Num*/
-ol {
-    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
-    color : #5ab092;
-
-    margin: 10px;
-    width: max-content;
-}
-
-ol li{
-    font-weight: bold;
-    position: relative;
-    left: 12%;
-}
-
-    /*Marked*/
-ul {
-    width: max-content;
-    background-color: var(--onyx);
-    color : white;
-    list-style-type: none;
-    float: left;
-}
-
-ul li::before{
-    content: "\20aa ";
-    padding-right: 5px;
-}
-
-ul li::after{
-    content: "\20aa ";
-    padding-left: 5px;
-}
-
-ul a:link {
-    color: white;
-}
-
-ul a:visited {
-    color: var(--rozequartz);
-}
-
-ul a:active {
-    color: aquamarine;
-}
-
 /*Tables*/
     /*All Tables*/
 table{
     border: 2px solid black;
+    justify-self: center;
 }
 
 tr {
@@ -193,7 +173,7 @@ table p{
 }
 
 thead {
-    background-color: var(--onyx);
+    background-color: var(--main-color);
     color: white;
     text-align: center;
 }
@@ -201,7 +181,6 @@ thead {
     /*Albums Table*/
 #albums-table {
     width: 300px;
-    align-self: center;
 }
 
 #albums-table td {
@@ -211,7 +190,6 @@ thead {
     /*Songs Table*/
 #songs-table {
     width: 50%;
-    align-self: center;
 }
 
 .album {
@@ -261,7 +239,7 @@ thead {
 }
 
 .hovered-row {
-    background-color: var(--onyx);
+    background-color: var(--main-color);
     color: white;
 }
 

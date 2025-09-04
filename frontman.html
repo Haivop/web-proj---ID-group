@@ -5,86 +5,105 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="author" content="Artem Svystun">
     <link rel="stylesheet" type="text/css" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <script src="navigation-bar.js"></script>
     <title>Imagine Dragons - Frontman</title>
 </head>
 <body>
-    <div class="nav" id="nav">
-        <a href="index.html">Про гурт</a>
-        <a href="frontman.html">Фронтмен</a>
-        <a href="line-up.html">Інші учасники</a>
-        <a href="songs&albums.html">Пісні та альбоми</a>
-    </div>
-
-    <H1 class="headers"><a name="Den R.">Фронтмен</a><hr></H1>
-
-    <section class="main-container">
-        <img src="Images/Dan Raynolds.jpg" alt="Деніель Рейнольдс" width="284px" height="481px">
-        <div class="content-conteiner">
-            <p>
-                Деніель Колтер «Ден» Рейнольдс <span class="info-i">англ. Daniel Coulter Reynolds, нар.14 липня 1987 року, Лас-Вегас, Невада</span> — 
-                американський музикант, автор пісень, мультиінструменталіст і музичний продюсер; фронтмен та засновник 
-                рок-гурту «Imagine Dragons».
-            </p>
-        
-            <ol type="I" id="genre-list">
-                <label><H3 class="headers">Жанри, в яких виконує</H3><hr></label>
-                <li>Алтернативний рок</li>
-                <li>Інді-рок</li>
-                <li>Поп-рок</li>
-                <li>Інді-поп</li>
-                <li>Електропоп</li>
-            </ol>
-        </div>
-        <button onclick="changeListType()">Змінити відображення списка</button>
-    </section>
-    
-    <div>
-        <ul type="circle" id="song-list">
-            <label><H3 class="headers">Його співпраці</H3><hr></label>
-            <li>All tracks - Egyptian</li>
-            <li>"Stranger" - <a href="Images/X-Ambassadors_680x440.jpg" target="Playout">X Ambassadors</a></li>
-            <li>"Tessa"	- Various Artists for movie "Transformers: Age of Extinction – The Score"</li>
-            <li>"Nothing Quite Like Home" - G. Love & Special Sauce featuring Ben Harper</li>
-            <li>"I Believe (Get Over Yourself)" - <a href="Images/Nico Vega.jpg" target="Playout">Nico Vega</a></li>
-            <li>"I'm On Fire" - <a href="Images/Nico Vega.jpg" target="Playout">Nico Vega</a></li>
-            <li>"Fear" - <a href="Images/X-Ambassadors_680x440.jpg" target="Playout">X Ambassadors</a></li>
-            <li>"Someone Else" - Steve Angello</li>
-            <li>"Last Day Alive" - The Chainsmokers featuring Florida Georgia Line</li>
-            <li>"Lyin'" - Bishop Briggs</li>
-            <li>"Skipping Stones" - Dan Reynolds and Hans Zimmer</li>
-            <li>"Hustle" - Pink</li>
-            <li>"This Baby Don't Cry" - K.Flay</li>
-            <li>"Original Me" - Yungblud</li>
-            <li>"My Own Dance" - Kesha</li>
-            <li>"Stand Up" - Tom Morello</li>
-            <li>"Life is Beautiful" - Thirty Seconds to Mars</li>
+    <div id="sidebar">
+        <ul>
+            <li><a href="index.html">Про гурт</a></li>
+            <li class="active"><a href="frontman.html">Фронтмен</a></li>
+            <li><a href="line-up.html">Інші учасники</a></li>
+            <li><a href="songs&albums.html">Пісні та альбоми</a></li>
         </ul>
     </div>
-    
+
     <section>
-        <div>
-            <H2 class="headers">Ранні роки<hr></H2>
-            <p class="content-conteiner">
-                Ден — сьомий із дев'яти дітей Крістін М. (до шлюбу Келістер) і Рональда Рейнольдса; 
-                народився 14 липня 1987 року в Лас-Вегасі, штат Невада. У 2005 році Ден як хлопчик-скаут 
-                досяг найвищої позиції в ієрархії скаутів Америки. Рейнольдс є членом Церкви Ісуса Христа 
-                Святих останніх днів. Коли йому було 19 років, розпочав працювати повний день волонтером у 
-                Небрасці, де пропрацював на добровільних засадах наступні два роки. Про свої колись 
-                досить непрості взаємини із батьками Рейнольдс написав пісню «I Bet My Life». Після 
-                закінчення школи Ден навчався в одному з університетів Лас-Вегаса, а пізніше — в Університеті 
-                Брігама Янга. <br>
-            </p>
-        </div>
-        
-        <div>
-            <H2 class="headers">Нагороди<hr></H2>
-            <p class="content-conteiner">
-                Ден Рейнольдс <a id="#award-doc" href="https://www.president.gov.ua/documents/5952022-43765" target="_blank"><b>отримав</b></a> Орден «За заслуги» ІІІ ступеня (Україна, 23 серпня 2022) — за значні особисті заслуги у 
-                зміцненні міждержавного співробітництва, підтримку державного суверенітету та територіальної цілісності України, 
-                вагомий внесок у популяризацію Української держави у світі.
-            </p>
-        </div>
+        <header class="credentials">
+            <i class="fa fa-bars" id="bars-icon"></i>
+            <div>
+                <p><a href="https://shop.imaginedragonsmusic.com/">Imagine Dragons store website</a></p>
+                <a href="https://github.com/Haivop/web-proj---ID-group"><i class="fa fa-github" id="github-icon"></i></a>
+            </div>
+        </header>
+
+        <section>
+            <H1 class="headers"><a name="Den R.">Фронтмен</a><hr></H1>
+            <section class="main-container">
+                <img src="Images/Dan Raynolds.jpg" alt="Деніель Рейнольдс" width="284px" height="481px">
+                <div class="content-conteiner">
+                    <p>
+                        Деніель Колтер «Ден» Рейнольдс <span class="info-i">англ. Daniel Coulter Reynolds, нар.14 липня 1987 року, Лас-Вегас, Невада</span> — 
+                        американський музикант, автор пісень, мультиінструменталіст і музичний продюсер; фронтмен та засновник 
+                        рок-гурту «Imagine Dragons».
+                    </p>
+                
+                    <ol type="I" id="genre-list">
+                        <label><H3 class="headers">Жанри, в яких виконує</H3></label>
+                        <li>Алтернативний рок</li>
+                        <li>Інді-рок</li>
+                        <li>Поп-рок</li>
+                        <li>Інді-поп</li>
+                        <li>Електропоп</li>
+                    </ol>
+                </div>
+            </section>
+
+            <div>
+                <ul type="circle" id="song-list">
+                    <label><H3 class="headers">Його співпраці</H3></label>
+                    <li>All tracks - Egyptian</li>
+                    <li>"Stranger" - <a href="Images/X-Ambassadors_680x440.jpg" target="Playout">X Ambassadors</a></li>
+                    <li>"Tessa"	- Various Artists for movie "Transformers: Age of Extinction – The Score"</li>
+                    <li>"Nothing Quite Like Home" - G. Love & Special Sauce featuring Ben Harper</li>
+                    <li>"I Believe (Get Over Yourself)" - <a href="Images/Nico Vega.jpg" target="Playout">Nico Vega</a></li>
+                    <li>"I'm On Fire" - <a href="Images/Nico Vega.jpg" target="Playout">Nico Vega</a></li>
+                    <li>"Fear" - <a href="Images/X-Ambassadors_680x440.jpg" target="Playout">X Ambassadors</a></li>
+                    <li>"Someone Else" - Steve Angello</li>
+                    <li>"Last Day Alive" - The Chainsmokers featuring Florida Georgia Line</li>
+                    <li>"Lyin'" - Bishop Briggs</li>
+                    <li>"Skipping Stones" - Dan Reynolds and Hans Zimmer</li>
+                    <li>"Hustle" - Pink</li>
+                    <li>"This Baby Don't Cry" - K.Flay</li>
+                    <li>"Original Me" - Yungblud</li>
+                    <li>"My Own Dance" - Kesha</li>
+                    <li>"Stand Up" - Tom Morello</li>
+                    <li>"Life is Beautiful" - Thirty Seconds to Mars</li>
+                </ul>
+            </div>
+
+            <section>
+                <div>
+                    <H2 class="headers">Ранні роки<hr></H2>
+                    <p class="content-conteiner">
+                        Ден — сьомий із дев'яти дітей Крістін М. (до шлюбу Келістер) і Рональда Рейнольдса; 
+                        народився 14 липня 1987 року в Лас-Вегасі, штат Невада. У 2005 році Ден як хлопчик-скаут 
+                        досяг найвищої позиції в ієрархії скаутів Америки. Рейнольдс є членом Церкви Ісуса Христа 
+                        Святих останніх днів. Коли йому було 19 років, розпочав працювати повний день волонтером у 
+                        Небрасці, де пропрацював на добровільних засадах наступні два роки. Про свої колись 
+                        досить непрості взаємини із батьками Рейнольдс написав пісню «I Bet My Life». Після 
+                        закінчення школи Ден навчався в одному з університетів Лас-Вегаса, а пізніше — в Університеті 
+                        Брігама Янга. <br>
+                    </p>
+                </div>
+                
+                <div>
+                    <H2 class="headers">Нагороди<hr></H2>
+                    <p class="content-conteiner">
+                        Ден Рейнольдс <a id="#award-doc" href="https://www.president.gov.ua/documents/5952022-43765" target="_blank"><b>отримав</b></a> Орден «За заслуги» ІІІ ступеня (Україна, 23 серпня 2022) — за значні особисті заслуги у 
+                        зміцненні міждержавного співробітництва, підтримку державного суверенітету та територіальної цілісності України, 
+                        вагомий внесок у популяризацію Української держави у світі.
+                    </p>
+                </div>
+            </section>
+        </section>
     </section>
+
+
+    
+
+    
         
 
 </body>

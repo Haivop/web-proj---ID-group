@@ -7,6 +7,7 @@
     <link rel="stylesheet" type="text/css" href="style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <script src="navigation-bar.js"></script>
+    <script src="tabs.js"></script>
     <title>Imagine Dragons - Songs</title>
 </head>
 <body>
@@ -21,15 +22,20 @@
 
     <section>
         <header class="credentials">
-            <i class="fa fa-bars" id="bars-icon"></i>
-            <div>
-                <p><a href="https://shop.imaginedragonsmusic.com/">Imagine Dragons store website</a></p>
-                <a href="https://github.com/Haivop/web-proj---ID-group"><i class="fa fa-github" id="github-icon"></i></a>
+            <div id="credentials"> 
+                <i class="fa fa-bars" id="bars-icon"></i>
+                <div>
+                    <p><a href="https://shop.imaginedragonsmusic.com/">Imagine Dragons store website</a></p>
+                    <a href="https://github.com/Haivop/web-proj---ID-group"><i class="fa fa-github" id="github-icon"></i></a>
+                </div>
+            </div>
+            <div id="tabs">
+                <button id="tab-btn1" class="tab-btn active" onclick="toAlbums()">Альбоми</button>
+                <button id="tab-btn2" class="tab-btn" onclick="toSongs()">Пісні</button>
             </div>
         </header>
-        
+
         <section>
-            <H1 class="headers">Пісні та альбоми<hr></H1>
             <table id="albums-table">
                 <caption><h2 class="headers">Albums</h2></caption>
                 <thead data-toggle-id="albums-metadata"><tr><td><b>Night Visions</b></td><td><b>Smoke+Mirrors</b></td><td><b>Origins</b></td><td><b>Loom</b></td></tr></thead>
@@ -118,7 +124,7 @@
         </section>
 
         <section>
-            <table id="songs-table">
+            <table id="songs-table" class="hidden">
                 <caption><h2 class="headers">Songs</h2></caption>
 
                 <thead>

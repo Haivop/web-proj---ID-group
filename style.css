@@ -59,12 +59,41 @@ body{
     color: var(--accent-color);
 }
 
-#sidebar a:hover, #sidebar li:hover {
+#sidebar a:hover, #sidebar li:hover{
     background-color: gray;
 }
 
 #sidebar.active{
     width: 170px;
+}
+
+#tabs{
+    display: flex;
+    background-color: var(--main-color);
+
+    position: sticky;
+    top: 0;
+    align-self: self-start;
+}
+
+#tabs > .tab-btn{
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    font-size: 1rem;
+
+    background-color: var(--main-color);
+    border: 0;
+    color : lightgray;
+
+    padding: 1rem;
+}
+
+
+#tabs > .tab-btn:hover{
+    background-color: gray;
+}
+
+#tabs > .tab-btn.active{
+    color: var(--accent-color);
 }
 
 /*Headers*/
@@ -75,12 +104,22 @@ body{
 
 .credentials{
     background-color: var(--main-color);
+
     display: flex;
-    justify-content: space-between;
+    flex-direction: column;
 
     position: sticky;
     top: 0;
     align-self: self-start;
+}
+
+#credentials{
+    display: flex;
+    justify-content: space-between;
+}
+
+#credentials > div{
+    display: flex;
 }
 
 .credentials p a{
@@ -183,6 +222,10 @@ thead {
     width: 300px;
 }
 
+#albums-table.hidden {
+    display: none;
+}
+
 #albums-table td {
     border: 2px solid black;
 }
@@ -190,6 +233,11 @@ thead {
     /*Songs Table*/
 #songs-table {
     width: 50%;
+    display: table;
+}
+
+#songs-table.hidden {
+    display: none;
 }
 
 .album {

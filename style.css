@@ -20,6 +20,8 @@ body{
     height: 100%;
     margin: 0;
     padding: 0;
+
+    user-select: none;
 }
 
 /*Navigation*/
@@ -219,15 +221,36 @@ thead {
 
     /*Albums Table*/
 #albums-table {
-    width: 300px;
+    display: flex;
+    justify-content: space-between;
+
+    width: 100%;
+    height: 88.4%;
+}
+
+#albums-table > div{
+    align-content: center;
+}
+
+#albums-table > i{
+    align-content: center;
+    font-size: 2rem;
+
+    margin-left: 60px;
+    margin-right: 60px;
+}
+
+#albums-table img{
+    height: 400px;
+    width: 400px;
+}
+
+#albums-table img.hidden{
+    display: none;
 }
 
 #albums-table.hidden {
     display: none;
-}
-
-#albums-table td {
-    border: 2px solid black;
 }
 
     /*Songs Table*/
